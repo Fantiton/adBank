@@ -1,6 +1,6 @@
 ﻿namespace adBank
 {
-    partial class rizzler
+    partial class form
     {
         /// <summary>
         ///  Required designer variable.
@@ -32,12 +32,12 @@
             label1 = new Label();
             DownloadButton = new Button();
             AccountDetailsGroupBox = new GroupBox();
-            AccountNameLabel = new Label();
-            AccountNameTextBox = new TextBox();
-            AccountNumberLabel = new Label();
-            AccountNumberTextBox = new TextBox();
-            AccountAmountLabel = new Label();
             AccountAmountTextBox = new TextBox();
+            AccountAmountLabel = new Label();
+            AccountNumberTextBox = new TextBox();
+            AccountNumberLabel = new Label();
+            AccountNameTextBox = new TextBox();
+            AccountNameLabel = new Label();
             AccountDetailsGroupBox.SuspendLayout();
             SuspendLayout();
             // 
@@ -75,46 +75,20 @@
             AccountDetailsGroupBox.Controls.Add(AccountNumberLabel);
             AccountDetailsGroupBox.Controls.Add(AccountNameTextBox);
             AccountDetailsGroupBox.Controls.Add(AccountNameLabel);
+            AccountDetailsGroupBox.Enabled = false;
             AccountDetailsGroupBox.Location = new Point(12, 35);
             AccountDetailsGroupBox.Name = "AccountDetailsGroupBox";
             AccountDetailsGroupBox.Size = new Size(776, 109);
             AccountDetailsGroupBox.TabIndex = 3;
             AccountDetailsGroupBox.TabStop = false;
-            AccountDetailsGroupBox.Text = "Rachunek nr: ";
+            AccountDetailsGroupBox.Text = "Rachunek";
             // 
-            // AccountNameLabel
+            // AccountAmountTextBox
             // 
-            AccountNameLabel.AutoSize = true;
-            AccountNameLabel.Location = new Point(6, 48);
-            AccountNameLabel.Name = "AccountNameLabel";
-            AccountNameLabel.Size = new Size(104, 15);
-            AccountNameLabel.TabIndex = 0;
-            AccountNameLabel.Text = "Nazwa Rachunku: ";
-            // 
-            // AccountNameTextBox
-            // 
-            AccountNameTextBox.Location = new Point(109, 45);
-            AccountNameTextBox.Name = "AccountNameTextBox";
-            AccountNameTextBox.ReadOnly = true;
-            AccountNameTextBox.Size = new Size(221, 23);
-            AccountNameTextBox.TabIndex = 1;
-            // 
-            // AccountNumberLabel
-            // 
-            AccountNumberLabel.AutoSize = true;
-            AccountNumberLabel.Location = new Point(6, 19);
-            AccountNumberLabel.Name = "AccountNumberLabel";
-            AccountNumberLabel.Size = new Size(100, 15);
-            AccountNumberLabel.TabIndex = 2;
-            AccountNumberLabel.Text = "Numer Rachunku";
-            // 
-            // AccountNumberTextBox
-            // 
-            AccountNumberTextBox.Location = new Point(109, 16);
-            AccountNumberTextBox.Name = "AccountNumberTextBox";
-            AccountNumberTextBox.ReadOnly = true;
-            AccountNumberTextBox.Size = new Size(221, 23);
-            AccountNumberTextBox.TabIndex = 3;
+            AccountAmountTextBox.Location = new Point(109, 74);
+            AccountAmountTextBox.Name = "AccountAmountTextBox";
+            AccountAmountTextBox.Size = new Size(221, 23);
+            AccountAmountTextBox.TabIndex = 5;
             // 
             // AccountAmountLabel
             // 
@@ -125,14 +99,41 @@
             AccountAmountLabel.TabIndex = 4;
             AccountAmountLabel.Text = "Stan Konta: ";
             // 
-            // AccountAmountTextBox
+            // AccountNumberTextBox
             // 
-            AccountAmountTextBox.Location = new Point(109, 74);
-            AccountAmountTextBox.Name = "AccountAmountTextBox";
-            AccountAmountTextBox.Size = new Size(221, 23);
-            AccountAmountTextBox.TabIndex = 5;
+            AccountNumberTextBox.Location = new Point(109, 16);
+            AccountNumberTextBox.Name = "AccountNumberTextBox";
+            AccountNumberTextBox.ReadOnly = true;
+            AccountNumberTextBox.Size = new Size(221, 23);
+            AccountNumberTextBox.TabIndex = 3;
             // 
-            // rizzler
+            // AccountNumberLabel
+            // 
+            AccountNumberLabel.AutoSize = true;
+            AccountNumberLabel.Location = new Point(6, 19);
+            AccountNumberLabel.Name = "AccountNumberLabel";
+            AccountNumberLabel.Size = new Size(100, 15);
+            AccountNumberLabel.TabIndex = 2;
+            AccountNumberLabel.Text = "Numer Rachunku";
+            // 
+            // AccountNameTextBox
+            // 
+            AccountNameTextBox.Location = new Point(109, 45);
+            AccountNameTextBox.Name = "AccountNameTextBox";
+            AccountNameTextBox.ReadOnly = true;
+            AccountNameTextBox.Size = new Size(221, 23);
+            AccountNameTextBox.TabIndex = 1;
+            // 
+            // AccountNameLabel
+            // 
+            AccountNameLabel.AutoSize = true;
+            AccountNameLabel.Location = new Point(6, 48);
+            AccountNameLabel.Name = "AccountNameLabel";
+            AccountNameLabel.Size = new Size(104, 15);
+            AccountNameLabel.TabIndex = 0;
+            AccountNameLabel.Text = "Nazwa Rachunku: ";
+            // 
+            // form
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -141,7 +142,7 @@
             Controls.Add(DownloadButton);
             Controls.Add(label1);
             Controls.Add(AccountNoTextBox);
-            Name = "rizzler";
+            Name = "form";
             Text = "Form1";
             AccountDetailsGroupBox.ResumeLayout(false);
             AccountDetailsGroupBox.PerformLayout();

@@ -3,9 +3,9 @@ using System.Text.Json.Serialization;
 
 namespace adBank
 {
-    public partial class rizzler : Form
+    public partial class form : Form
     {
-        public rizzler()
+        public form()
         {
             InitializeComponent();
         }
@@ -19,6 +19,7 @@ namespace adBank
             string json = response.Content.ReadAsStringAsync().Result;
             Account account = JsonConvert.DeserializeObject<Account>(json);
 
+            AccountDetailsGroupBox.Enabled = true;
             AccountNameTextBox.Text = account.name.ToString();
             AccountNumberTextBox.Text = account.accountNo.ToString();
             AccountAmountTextBox.Text = account.amount.ToString();
