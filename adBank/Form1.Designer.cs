@@ -1,6 +1,6 @@
 ﻿namespace adBank
 {
-    partial class form
+    partial class Form1
     {
         /// <summary>
         ///  Required designer variable.
@@ -133,7 +133,7 @@
             AccountNameLabel.TabIndex = 0;
             AccountNameLabel.Text = "Nazwa Rachunku: ";
             // 
-            // form
+            // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -142,7 +142,7 @@
             Controls.Add(DownloadButton);
             Controls.Add(label1);
             Controls.Add(AccountNoTextBox);
-            Name = "form";
+            Name = "Form1";
             Text = "Form1";
             Load += OnAppLoad;
             AccountDetailsGroupBox.ResumeLayout(false);

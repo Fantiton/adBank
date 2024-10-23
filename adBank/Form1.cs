@@ -3,9 +3,10 @@ using System.Text.Json.Serialization;
 
 namespace adBank
 {
-    public partial class form : Form
+    public partial class Form1 : Form
     {
-        public form()
+        public string token;
+        public Form1()
         {
             InitializeComponent();
         }
@@ -27,7 +28,7 @@ namespace adBank
 
         private void OnAppLoad(object sender, EventArgs e)
         {
-            Login loginForm = new Login();
+            Login loginForm = new Login(this);
             if(loginForm.ShowDialog(this) == DialogResult.OK)
             {
                 this.Show();
