@@ -24,5 +24,19 @@ namespace adBank
             AccountNumberTextBox.Text = account.accountNo.ToString();
             AccountAmountTextBox.Text = account.amount.ToString();
         }
+
+        private void OnAppLoad(object sender, EventArgs e)
+        {
+            Login loginForm = new Login();
+            if(loginForm.ShowDialog(this) == DialogResult.OK)
+            {
+                this.Show();
+            }
+            else
+            {
+                Application.Exit();
+            }
+           
+        }
     }
 }
