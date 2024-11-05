@@ -27,20 +27,26 @@ namespace adBank
             string password = PasswordTextBox.Text;
 
             HttpClient client = new HttpClient();
+            string url = "http://localhost/bankAPI/login/";
             var data = new { login = login, password = password };
-            string url = "http://localhost/adApi/adApi/login/";
-            HttpResponseMessage response = client.PostAsJsonAsync(url, data).Result;
-
+            HttpResponseMessage response =
+                client.PostAsJsonAsync(url, data).Result;
             string json = response.Content.ReadAsStringAsync().Result;
             Token t = JsonConvert.DeserializeObject<Token>(json);
             MainForm.token = t.token;
 
             this.DialogResult = DialogResult.OK;
+            this.Close();
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
