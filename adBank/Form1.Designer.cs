@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            AccountNoTextBox = new TextBox();
-            label1 = new Label();
-            DownloadButton = new Button();
             AccountDetailsGroupBox = new GroupBox();
             AccountAmountTextBox = new TextBox();
             AccountAmountLabel = new Label();
@@ -38,34 +35,8 @@
             AccountNumberLabel = new Label();
             AccountNameTextBox = new TextBox();
             AccountNameLabel = new Label();
-            textBox1 = new TextBox();
             AccountDetailsGroupBox.SuspendLayout();
             SuspendLayout();
-            // 
-            // AccountNoTextBox
-            // 
-            AccountNoTextBox.Location = new Point(121, 6);
-            AccountNoTextBox.Name = "AccountNoTextBox";
-            AccountNoTextBox.Size = new Size(126, 23);
-            AccountNoTextBox.TabIndex = 0;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(12, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(103, 15);
-            label1.TabIndex = 1;
-            label1.Text = "Numer rachunku: ";
-            // 
-            // DownloadButton
-            // 
-            DownloadButton.Location = new Point(250, 6);
-            DownloadButton.Name = "DownloadButton";
-            DownloadButton.Size = new Size(92, 23);
-            DownloadButton.TabIndex = 2;
-            DownloadButton.Text = "PobierzDane";
-            DownloadButton.UseVisualStyleBackColor = true;
             // 
             // AccountDetailsGroupBox
             // 
@@ -78,7 +49,7 @@
             AccountDetailsGroupBox.Enabled = false;
             AccountDetailsGroupBox.Location = new Point(12, 35);
             AccountDetailsGroupBox.Name = "AccountDetailsGroupBox";
-            AccountDetailsGroupBox.Size = new Size(776, 109);
+            AccountDetailsGroupBox.Size = new Size(341, 109);
             AccountDetailsGroupBox.TabIndex = 3;
             AccountDetailsGroupBox.TabStop = false;
             AccountDetailsGroupBox.Text = "Rachunek";
@@ -133,23 +104,12 @@
             AccountNameLabel.TabIndex = 0;
             AccountNameLabel.Text = "Nazwa Rachunku: ";
             // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(101, 279);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(509, 23);
-            textBox1.TabIndex = 4;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(textBox1);
+            ClientSize = new Size(365, 152);
             Controls.Add(AccountDetailsGroupBox);
-            Controls.Add(DownloadButton);
-            Controls.Add(label1);
-            Controls.Add(AccountNoTextBox);
             Name = "Form1";
             Text = "Form1";
             Load += OnAppLoad;
@@ -157,14 +117,9 @@
             AccountDetailsGroupBox.ResumeLayout(false);
             AccountDetailsGroupBox.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private TextBox AccountNoTextBox;
-        private Label label1;
-        private Button DownloadButton;
         private GroupBox AccountDetailsGroupBox;
         private Label AccountNameLabel;
         private TextBox AccountNameTextBox;
@@ -172,6 +127,5 @@
         private Label AccountNumberLabel;
         private Label AccountAmountLabel;
         private TextBox AccountAmountTextBox;
-        private TextBox textBox1;
     }
 }

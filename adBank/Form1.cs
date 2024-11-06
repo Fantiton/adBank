@@ -34,7 +34,6 @@ namespace adBank
             if(loginForm.ShowDialog(this) == DialogResult.OK)
             {
                 this.Show();
-                textBox1.Text = token;
             }
             else
             {
