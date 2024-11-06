@@ -146,14 +146,14 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(795, 450);
+            panel1.Size = new Size(798, 450);
             panel1.TabIndex = 1;
             // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(795, 450);
+            ClientSize = new Size(798, 450);
             Controls.Add(panel1);
             Name = "Login";
             Text = "Login";

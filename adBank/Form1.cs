@@ -1,4 +1,5 @@
 using Newtonsoft.Json;
+using System.Net.Http.Json;
 using System.Text.Json.Serialization;
 
 namespace adBank
@@ -14,9 +15,10 @@ namespace adBank
         private void GetAccountData(object sender, EventArgs e)
         {
             HttpClient client = new HttpClient();
-            string url = "http://localhost/adApi/adApi/account/";
-            url += AccountNoTextBox.Text;
-            HttpResponseMessage response = client.GetAsync(url).Result;
+            string url = "http://localhost/adApi/adApi/account/details";
+               
+            var data = new { token = token };
+            HttpResponseMessage response = client.PostAsJsonAsync(url, data).Result;
             string json = response.Content.ReadAsStringAsync().Result;
             Account account = JsonConvert.DeserializeObject<Account>(json);
 
