@@ -38,6 +38,7 @@
             AccountNumberLabel = new Label();
             AccountNameTextBox = new TextBox();
             AccountNameLabel = new Label();
+            textBox1 = new TextBox();
             AccountDetailsGroupBox.SuspendLayout();
             SuspendLayout();
             // 
@@ -133,11 +134,19 @@
             AccountNameLabel.TabIndex = 0;
             AccountNameLabel.Text = "Nazwa Rachunku: ";
             // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(101, 279);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(509, 23);
+            textBox1.TabIndex = 4;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(textBox1);
             Controls.Add(AccountDetailsGroupBox);
             Controls.Add(DownloadButton);
             Controls.Add(label1);
@@ -163,5 +172,6 @@
         private Label AccountNumberLabel;
         private Label AccountAmountLabel;
         private TextBox AccountAmountTextBox;
+        private TextBox textBox1;
     }
 }
