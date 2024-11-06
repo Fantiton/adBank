@@ -27,7 +27,7 @@ namespace adBank
             string password = PasswordTextBox.Text;
 
             HttpClient client = new HttpClient();
-            string url = "http://localhost/bankAPI/login/";
+            string url = "http://localhost/AdApi/AdApi/login/";
             var data = new { login = login, password = password };
             HttpResponseMessage response =
                 client.PostAsJsonAsync(url, data).Result;
