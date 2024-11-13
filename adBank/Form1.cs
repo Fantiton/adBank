@@ -12,11 +12,16 @@ namespace adBank
             InitializeComponent();
         }
 
-        private void GetAccountData(object sender, EventArgs e)
+        private void OnAppShown(object sender, EventArgs e)
+        {
+            GetAccountData();
+        }
+
+        private void GetAccountData()
         {
             HttpClient client = new HttpClient();
             string url = "http://localhost/adApi/adApi/account/details";
-               
+
             var data = new { token = token };
             HttpResponseMessage response = client.PostAsJsonAsync(url, data).Result;
             string json = response.Content.ReadAsStringAsync().Result;
@@ -25,13 +30,14 @@ namespace adBank
             AccountDetailsGroupBox.Enabled = true;
             AccountNameTextBox.Text = account.name.ToString();
             AccountNumberTextBox.Text = account.accountNo.ToString();
-            AccountAmountTextBox.Text = account.amount.ToString();
+            AccountAmountTextBox.Text = ((float)account.amount / 100).ToString();
         }
+
 
         private void OnAppLoad(object sender, EventArgs e)
         {
             Login loginForm = new Login(this);
-            if(loginForm.ShowDialog(this) == DialogResult.OK)
+            if (loginForm.ShowDialog(this) == DialogResult.OK)
             {
                 this.Show();
             }
@@ -39,7 +45,19 @@ namespace adBank
             {
                 Application.Exit();
             }
-           
+
+        }
+        private void NewTransferButton_Click(object sender, EventArgs e)
+        {
+            NewTransfer newTransfer = new NewTransfer();
+            newTransfer.token = token;
+            newTransfer.source = AccountNumberTextBox.Text;
+            newTransfer.ShowDialog();
+
+            if(newTransfer.DialogResult == DialogResult.OK)
+            {
+                GetAccountData();
+            }
         }
     }
 }

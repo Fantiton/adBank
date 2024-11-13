@@ -35,6 +35,7 @@
             AccountNumberLabel = new Label();
             AccountNameTextBox = new TextBox();
             AccountNameLabel = new Label();
+            NewTransferButton = new Button();
             AccountDetailsGroupBox.SuspendLayout();
             SuspendLayout();
             // 
@@ -47,7 +48,7 @@
             AccountDetailsGroupBox.Controls.Add(AccountNameTextBox);
             AccountDetailsGroupBox.Controls.Add(AccountNameLabel);
             AccountDetailsGroupBox.Enabled = false;
-            AccountDetailsGroupBox.Location = new Point(12, 35);
+            AccountDetailsGroupBox.Location = new Point(12, 12);
             AccountDetailsGroupBox.Name = "AccountDetailsGroupBox";
             AccountDetailsGroupBox.Size = new Size(341, 109);
             AccountDetailsGroupBox.TabIndex = 3;
@@ -104,16 +105,27 @@
             AccountNameLabel.TabIndex = 0;
             AccountNameLabel.Text = "Nazwa Rachunku: ";
             // 
+            // NewTransferButton
+            // 
+            NewTransferButton.Location = new Point(121, 127);
+            NewTransferButton.Name = "NewTransferButton";
+            NewTransferButton.Size = new Size(124, 23);
+            NewTransferButton.TabIndex = 4;
+            NewTransferButton.Text = "Nowy Przelew";
+            NewTransferButton.UseVisualStyleBackColor = true;
+            NewTransferButton.Click += NewTransferButton_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(365, 152);
+            ClientSize = new Size(365, 188);
+            Controls.Add(NewTransferButton);
             Controls.Add(AccountDetailsGroupBox);
             Name = "Form1";
             Text = "Form1";
             Load += OnAppLoad;
-            Shown += GetAccountData;
+            Shown += OnAppShown;
             AccountDetailsGroupBox.ResumeLayout(false);
             AccountDetailsGroupBox.PerformLayout();
             ResumeLayout(false);
@@ -127,5 +139,6 @@
         private Label AccountNumberLabel;
         private Label AccountAmountLabel;
         private TextBox AccountAmountTextBox;
+        private Button NewTransferButton;
     }
 }

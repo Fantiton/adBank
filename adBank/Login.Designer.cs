@@ -129,6 +129,7 @@
             EmailTextBox.Name = "EmailTextBox";
             EmailTextBox.Size = new Size(391, 23);
             EmailTextBox.TabIndex = 5;
+            EmailTextBox.Text = "rizzler@teb";
             // 
             // PasswordTextBox
             // 
@@ -138,6 +139,7 @@
             PasswordTextBox.PasswordChar = '*';
             PasswordTextBox.Size = new Size(391, 23);
             PasswordTextBox.TabIndex = 6;
+            PasswordTextBox.Text = "123";
             PasswordTextBox.UseSystemPasswordChar = true;
             // 
             // panel1
