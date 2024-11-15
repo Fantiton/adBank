@@ -32,17 +32,24 @@ namespace adBank
             var data = new { amount = amount, target = target, token = token };
             HttpResponseMessage response = client.PostAsJsonAsync(url, data).Result;
 
-            if(response.StatusCode == System.Net.HttpStatusCode.OK)
+            if (response.StatusCode == System.Net.HttpStatusCode.OK)
             {
                 MessageBox.Show("Transfer completed successfully");
-                
+
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
             else
             {
-                MessageBox.Show("Transfer failed");
+                var errorMessage = response.Content.ReadAsStringAsync().Result;
+                dynamic errorObject = JsonConvert.DeserializeObject(errorMessage);
+                MessageBox.Show("Transfer failed: " + errorObject.error);
             }
+        }
+
+        private void NewTransfer_Load(object sender, EventArgs e)
+        {
+            SourceTextBox.Text = source;
         }
     }
 }

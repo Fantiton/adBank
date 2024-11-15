@@ -110,6 +110,7 @@
             Controls.Add(SourceTextBox);
             Name = "NewTransfer";
             Text = "Form2";
+            Load += NewTransfer_Load;
             ResumeLayout(false);
             PerformLayout();
         }
