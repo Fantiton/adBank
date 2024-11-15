@@ -17,7 +17,7 @@ namespace adBank
             GetAccountData();
         }
 
-        private void GetAccountData()
+        public void GetAccountData()
         {
             HttpClient client = new HttpClient();
             string url = "http://localhost/adApi/adApi/account/details";
@@ -52,12 +52,11 @@ namespace adBank
             NewTransfer newTransfer = new NewTransfer();
             newTransfer.token = token;
             newTransfer.source = AccountNumberTextBox.Text;
-            newTransfer.ShowDialog();
-
-            if(newTransfer.DialogResult == DialogResult.OK)
+            if (newTransfer.ShowDialog() == DialogResult.OK)
             {
                 GetAccountData();
             }
+
         }
     }
 }

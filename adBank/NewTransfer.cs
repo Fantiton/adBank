@@ -35,6 +35,7 @@ namespace adBank
             if(response.StatusCode == System.Net.HttpStatusCode.OK)
             {
                 MessageBox.Show("Transfer completed successfully");
+                
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
