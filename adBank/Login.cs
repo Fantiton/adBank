@@ -28,7 +28,9 @@ namespace adBank
 
             HttpClient client = new HttpClient();
             string url = "http://localhost/AdApi/AdApi/login/";
-            var data = new { login = login, password = password };
+
+            LoginRequest data = new LoginRequest(login, password);
+
             HttpResponseMessage response =
                 client.PostAsJsonAsync(url, data).Result;
             string json = response.Content.ReadAsStringAsync().Result;
