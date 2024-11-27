@@ -61,6 +61,7 @@
             AccountAmountTextBox.Name = "AccountAmountTextBox";
             AccountAmountTextBox.Size = new Size(221, 23);
             AccountAmountTextBox.TabIndex = 5;
+            AccountAmountTextBox.TextChanged += AccountAmountTextBox_TextChanged;
             // 
             // AccountAmountLabel
             // 

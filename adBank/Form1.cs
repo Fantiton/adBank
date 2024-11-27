@@ -25,7 +25,9 @@ namespace adBank
             var data = new { token = token };
             HttpResponseMessage response = client.PostAsJsonAsync(url, data).Result;
             string json = response.Content.ReadAsStringAsync().Result;
-            Account account = JsonConvert.DeserializeObject<Account>(json);
+            AccountDetailsResponse accountDetailsResponse =
+                JsonConvert.DeserializeObject<AccountDetailsResponse>(json);
+            Account account = accountDetailsResponse.account;
 
             AccountDetailsGroupBox.Enabled = true;
             AccountNameTextBox.Text = account.name.ToString();
@@ -56,6 +58,11 @@ namespace adBank
             {
                 GetAccountData();
             }
+
+        }
+
+        private void AccountAmountTextBox_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
