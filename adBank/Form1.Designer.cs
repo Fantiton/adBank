@@ -36,6 +36,7 @@
             AccountNameTextBox = new TextBox();
             AccountNameLabel = new Label();
             NewTransferButton = new Button();
+            TransferHistoryButton = new Button();
             AccountDetailsGroupBox.SuspendLayout();
             SuspendLayout();
             // 
@@ -61,7 +62,6 @@
             AccountAmountTextBox.Name = "AccountAmountTextBox";
             AccountAmountTextBox.Size = new Size(221, 23);
             AccountAmountTextBox.TabIndex = 5;
-            AccountAmountTextBox.TextChanged += AccountAmountTextBox_TextChanged;
             // 
             // AccountAmountLabel
             // 
@@ -110,17 +110,28 @@
             // 
             NewTransferButton.Location = new Point(121, 127);
             NewTransferButton.Name = "NewTransferButton";
-            NewTransferButton.Size = new Size(124, 23);
+            NewTransferButton.Size = new Size(109, 23);
             NewTransferButton.TabIndex = 4;
             NewTransferButton.Text = "Nowy Przelew";
             NewTransferButton.UseVisualStyleBackColor = true;
             NewTransferButton.Click += NewTransferButton_Click;
+            // 
+            // TransferHistoryButton
+            // 
+            TransferHistoryButton.Location = new Point(236, 127);
+            TransferHistoryButton.Name = "TransferHistoryButton";
+            TransferHistoryButton.Size = new Size(106, 23);
+            TransferHistoryButton.TabIndex = 5;
+            TransferHistoryButton.Text = "Historia Przelewów";
+            TransferHistoryButton.UseVisualStyleBackColor = true;
+            TransferHistoryButton.Click += TransferHistoryButton_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(365, 188);
+            Controls.Add(TransferHistoryButton);
             Controls.Add(NewTransferButton);
             Controls.Add(AccountDetailsGroupBox);
             Name = "Form1";
@@ -141,5 +152,6 @@
         private Label AccountAmountLabel;
         private TextBox AccountAmountTextBox;
         private Button NewTransferButton;
+        private Button TransferHistoryButton;
     }
 }
