@@ -11,7 +11,6 @@ namespace adBank
         {
             InitializeComponent();
         }
-
         private void OnAppShown(object sender, EventArgs e)
         {
             GetAccountData();
@@ -58,7 +57,6 @@ namespace adBank
             {
                 GetAccountData();
             }
-
         }
 
         private void TransferHistoryButton_Click(object sender, EventArgs e)
