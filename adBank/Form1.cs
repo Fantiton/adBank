@@ -15,7 +15,6 @@ namespace adBank
         {
             GetAccountData();
         }
-
         public void GetAccountData()
         {
             HttpClient client = new HttpClient();
@@ -33,8 +32,6 @@ namespace adBank
             AccountNumberTextBox.Text = account.accountNo.ToString();
             AccountAmountTextBox.Text = ((float)account.amount / 100).ToString();
         }
-
-
         private void OnAppLoad(object sender, EventArgs e)
         {
             Login loginForm = new Login(this);
@@ -58,7 +55,6 @@ namespace adBank
                 GetAccountData();
             }
         }
-
         private void TransferHistoryButton_Click(object sender, EventArgs e)
         {
             TransferHistory transferHistory = new TransferHistory();
