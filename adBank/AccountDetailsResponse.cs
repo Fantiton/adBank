@@ -9,6 +9,6 @@ namespace adBank
     internal class AccountDetailsResponse
     {
         public string error { get; set; }
-        public Account account { get; set; }    
+        public Account account { get; set; }
     }
 }

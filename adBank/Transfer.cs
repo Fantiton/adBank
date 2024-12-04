@@ -8,11 +8,11 @@ namespace adBank
 {
     internal class Transfer
     {
-        private int id {  get; set; }
-        private Account source {  get; set; }
-        private Account target { get; set; }
-        private int amount { get; set; }
-        private string title { get; set; }
-        private DateTime timestamp { get; set; }
+        public int id {  get; set; }
+        public int source {  get; set; }
+        public int target { get; set; }
+        public int amount { get; set; }
+        public string title { get; set; }
+        public DateTime timestamp { get; set; }
     }
 }

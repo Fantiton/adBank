@@ -10,7 +10,7 @@ namespace adBank
     internal class LoginRequest
     {
         public string login { get; set; }
-        public string password { get; set; }    
+        public string password { get; set; }
 
         public LoginRequest(string login, string password)
         {

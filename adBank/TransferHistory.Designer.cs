@@ -28,9 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             transfersHistoryGridView = new DataGridView();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            TransferHistorySource = new BindingSource(components);
             ((System.ComponentModel.ISupportInitialize)transfersHistoryGridView).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)TransferHistorySource).BeginInit();
             SuspendLayout();
             // 
             // transfersHistoryGridView
@@ -51,6 +54,7 @@
             Text = "TransferHistory";
             Load += TransferHistory_Load;
             ((System.ComponentModel.ISupportInitialize)transfersHistoryGridView).EndInit();
+            ((System.ComponentModel.ISupportInitialize)TransferHistorySource).EndInit();
             ResumeLayout(false);
         }
 
@@ -58,5 +62,6 @@
 
         private DataGridView transfersHistoryGridView;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private BindingSource TransferHistorySource;
     }
 }

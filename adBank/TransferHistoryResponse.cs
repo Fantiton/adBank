@@ -8,7 +8,7 @@ namespace adBank
 {
     internal class TransferHistoryResponse
     {
-        public List<Transfer> transfers;
-        public string error;
+        public List<Transfer> transfers { get; set; }
+        public string error { get; set; }
     }
 }

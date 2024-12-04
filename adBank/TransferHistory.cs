@@ -26,8 +26,11 @@ namespace adBank
             string url = "http://localhost/AdApi/AdApi/transfer/history/";
             TransferHistoryRequest data = new TransferHistoryRequest(token);
             HttpResponseMessage response = client.PostAsJsonAsync(url, data).Result;
-
             TransferHistoryResponse transferHistoryResponse = JsonConvert.DeserializeObject<TransferHistoryResponse>(response.Content.ReadAsStringAsync().Result);
+
+            TransferHistorySource.DataSource = transferHistoryResponse.transfers;
+            transfersHistoryGridView.AutoGenerateColumns = true;
+            transfersHistoryGridView.DataSource = TransferHistorySource;
         }
     }
 }

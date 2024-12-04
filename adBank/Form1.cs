@@ -32,6 +32,7 @@ namespace adBank
             AccountNumberTextBox.Text = account.accountNo.ToString();
             AccountAmountTextBox.Text = ((float)account.amount / 100).ToString();
         }
+
         private void OnAppLoad(object sender, EventArgs e)
         {
             Login loginForm = new Login(this);
