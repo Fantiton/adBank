@@ -41,14 +41,14 @@
             transfersHistoryGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             transfersHistoryGridView.Location = new Point(12, 12);
             transfersHistoryGridView.Name = "transfersHistoryGridView";
-            transfersHistoryGridView.Size = new Size(776, 426);
+            transfersHistoryGridView.Size = new Size(721, 426);
             transfersHistoryGridView.TabIndex = 0;
             // 
             // TransferHistory
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(745, 450);
             Controls.Add(transfersHistoryGridView);
             Name = "TransferHistory";
             Text = "TransferHistory";

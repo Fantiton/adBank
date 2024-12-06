@@ -13,11 +13,11 @@ using System.Windows.Forms;
 
 namespace adBank
 {
-    public partial class NewTransfer : Form
+    public partial class AccountListButton : Form
     {
         public string token;
         public string source;
-        public NewTransfer()
+        public AccountListButton()
         {
             InitializeComponent();
         }
@@ -50,6 +50,12 @@ namespace adBank
         private void NewTransfer_Load(object sender, EventArgs e)
         {
             SourceTextBox.Text = source;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AccountList accountList = new AccountList();
+            accountList.ShowDialog();
         }
     }
 }

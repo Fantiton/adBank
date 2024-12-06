@@ -1,6 +1,6 @@
 ﻿namespace adBank
 {
-    partial class NewTransfer
+    partial class AccountListButton
     {
         /// <summary>
         /// Required designer variable.
@@ -35,6 +35,7 @@
             label2 = new Label();
             label3 = new Label();
             button1 = new Button();
+            button2 = new Button();
             SuspendLayout();
             // 
             // SourceTextBox
@@ -96,11 +97,22 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // NewTransfer
+            // button2
+            // 
+            button2.Location = new Point(12, 122);
+            button2.Name = "button2";
+            button2.Size = new Size(327, 23);
+            button2.TabIndex = 7;
+            button2.Text = "Wyszukaj numer konta";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // AccountListButton
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(354, 122);
+            ClientSize = new Size(353, 151);
+            Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -108,7 +120,7 @@
             Controls.Add(AmountTextBox);
             Controls.Add(TargetTextBox);
             Controls.Add(SourceTextBox);
-            Name = "NewTransfer";
+            Name = "AccountListButton";
             Text = "Form2";
             Load += NewTransfer_Load;
             ResumeLayout(false);
@@ -124,5 +136,6 @@
         private Label label2;
         private Label label3;
         private Button button1;
+        private Button button2;
     }
 }

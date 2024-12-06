@@ -48,7 +48,7 @@ namespace adBank
         }
         private void NewTransferButton_Click(object sender, EventArgs e)
         {
-            NewTransfer newTransfer = new NewTransfer();
+            AccountListButton newTransfer = new AccountListButton();
             newTransfer.token = token;
             newTransfer.source = AccountNumberTextBox.Text;
             if (newTransfer.ShowDialog() == DialogResult.OK)
@@ -56,6 +56,7 @@ namespace adBank
                 GetAccountData();
             }
         }
+
         private void TransferHistoryButton_Click(object sender, EventArgs e)
         {
             TransferHistory transferHistory = new TransferHistory();
