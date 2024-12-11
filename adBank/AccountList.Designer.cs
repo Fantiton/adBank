@@ -36,7 +36,7 @@
             // 
             // AccountListSearchTextBox
             // 
-            AccountListSearchTextBox.Location = new Point(12, 12);
+            AccountListSearchTextBox.Location = new Point(12, 11);
             AccountListSearchTextBox.Name = "AccountListSearchTextBox";
             AccountListSearchTextBox.Size = new Size(322, 23);
             AccountListSearchTextBox.TabIndex = 0;

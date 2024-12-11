@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net.Http.Json;
 
 namespace adBank
 {
@@ -21,6 +22,9 @@ namespace adBank
         {
             HttpClient client = new HttpClient();
             string url = "http://localhost/AdApi/AdApi/account/list";
+            var data = new { input = AccountListSearchTextBox.Text };
+            HttpResponseMessage response = client.PostAsJsonAsync(url, data).Result;
+
         }
     }
 }
