@@ -15,16 +15,18 @@ namespace adBank
     {
         public AccountList()
         {
-
+            InitializeComponent();
         }
 
         private void AccountListSearchButton_Click(object sender, EventArgs e)
         {
             HttpClient client = new HttpClient();
-            string url = "http://localhost/AdApi/AdApi/account/list";
-            var data = new { input = AccountListSearchTextBox.Text };
+            string url = "http://localhost/adApi/adApi/account/list";
+            var data = new { input = AccountListTextBox.Text };
             HttpResponseMessage response = client.PostAsJsonAsync(url, data).Result;
-
+            AccountListResponse accountListResponse = response.Content.ReadFromJsonAsync<AccountListResponse>().Result;
+            AccountListGridView.DataSource = accountListResponse.accounts;
+            AccountListGridView.AutoGenerateColumns = true;
         }
     }
 }

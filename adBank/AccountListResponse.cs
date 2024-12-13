@@ -8,7 +8,7 @@ namespace adBank
 {
     internal class AccountListResponse
     {
-        public List<Account> accounts;
-        public string error;
+        public List<Account> accounts { get; set; }
+        public string error { get; set; }
     }
 }

@@ -28,35 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            AccountListSearchTextBox = new TextBox();
             AccountListSearchButton = new Button();
+            AccountListTextBox = new TextBox();
             AccountListGridView = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)AccountListGridView).BeginInit();
             SuspendLayout();
             // 
-            // AccountListSearchTextBox
-            // 
-            AccountListSearchTextBox.Location = new Point(12, 11);
-            AccountListSearchTextBox.Name = "AccountListSearchTextBox";
-            AccountListSearchTextBox.Size = new Size(322, 23);
-            AccountListSearchTextBox.TabIndex = 0;
-            // 
             // AccountListSearchButton
             // 
-            AccountListSearchButton.Location = new Point(340, 11);
+            AccountListSearchButton.Location = new Point(354, 12);
             AccountListSearchButton.Name = "AccountListSearchButton";
-            AccountListSearchButton.Size = new Size(88, 24);
-            AccountListSearchButton.TabIndex = 1;
-            AccountListSearchButton.Text = "Szukaj";
+            AccountListSearchButton.Size = new Size(75, 23);
+            AccountListSearchButton.TabIndex = 0;
+            AccountListSearchButton.Text = "Wyszukaj";
             AccountListSearchButton.UseVisualStyleBackColor = true;
             AccountListSearchButton.Click += AccountListSearchButton_Click;
+            // 
+            // AccountListTextBox
+            // 
+            AccountListTextBox.Location = new Point(12, 12);
+            AccountListTextBox.Name = "AccountListTextBox";
+            AccountListTextBox.Size = new Size(336, 23);
+            AccountListTextBox.TabIndex = 1;
             // 
             // AccountListGridView
             // 
             AccountListGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             AccountListGridView.Location = new Point(12, 41);
             AccountListGridView.Name = "AccountListGridView";
-            AccountListGridView.Size = new Size(416, 397);
+            AccountListGridView.Size = new Size(417, 397);
             AccountListGridView.TabIndex = 2;
             // 
             // AccountList
@@ -65,8 +65,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(441, 450);
             Controls.Add(AccountListGridView);
+            Controls.Add(AccountListTextBox);
             Controls.Add(AccountListSearchButton);
-            Controls.Add(AccountListSearchTextBox);
             Name = "AccountList";
             Text = "AccountList";
             ((System.ComponentModel.ISupportInitialize)AccountListGridView).EndInit();
@@ -76,8 +76,8 @@
 
         #endregion
 
-        private TextBox AccountListSearchTextBox;
         private Button AccountListSearchButton;
+        private TextBox AccountListTextBox;
         private DataGridView AccountListGridView;
     }
 }
