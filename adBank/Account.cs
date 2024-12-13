@@ -11,5 +11,7 @@ namespace adBank
         public int accountNo {  get; set; }
         public int amount { get; set; }
         public string name { get; set; }
+
+        public string email { get; set; }
     }
 }

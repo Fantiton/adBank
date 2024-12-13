@@ -25,8 +25,17 @@ namespace adBank
             var data = new { input = AccountListTextBox.Text };
             HttpResponseMessage response = client.PostAsJsonAsync(url, data).Result;
             AccountListResponse accountListResponse = response.Content.ReadFromJsonAsync<AccountListResponse>().Result;
-            AccountListGridView.DataSource = accountListResponse.accounts;
-            AccountListGridView.AutoGenerateColumns = true;
+            
+            AccountListGridView.Columns.Add("accountNo", "Numer Konta");
+            AccountListGridView.Columns.Add("email", "Email Właściciela");
+
+            AccountListGridView.Columns[0].Width = 180;
+            AccountListGridView.Columns[1].Width = 180;
+
+            foreach (Account account in accountListResponse.accounts)
+            {
+                AccountListGridView.Rows.Add(account.accountNo, account.email);
+            }
         }
     }
 }
